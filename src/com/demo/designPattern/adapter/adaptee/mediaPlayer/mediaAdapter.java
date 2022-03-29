@@ -1,6 +1,6 @@
-package com.demo.designPattern.adapter.mediaPlayer;
+package com.demo.designPattern.adapter.adaptee.mediaPlayer;
 
-import com.demo.designPattern.adapter.advancedMediaPlayer.*;
+import com.demo.designPattern.adapter.adaptee.advancedMediaPlayer.*;
 
 public class mediaAdapter implements mediaPlayer {
     advancedMediaPlayer advancedMediaPlayer;

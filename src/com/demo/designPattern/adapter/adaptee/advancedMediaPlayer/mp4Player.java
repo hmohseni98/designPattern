@@ -1,4 +1,4 @@
-package com.demo.designPattern.adapter.advancedMediaPlayer;
+package com.demo.designPattern.adapter.adaptee.advancedMediaPlayer;
 
 
 public class mp4Player implements advancedMediaPlayer {

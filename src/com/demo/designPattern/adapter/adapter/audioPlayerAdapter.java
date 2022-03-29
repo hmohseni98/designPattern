@@ -1,18 +1,16 @@
-package com.demo.designPattern.adapter;
+package com.demo.designPattern.adapter.adapter;
 
-import com.demo.designPattern.adapter.mediaPlayer.mediaAdapter;
-import com.demo.designPattern.adapter.mediaPlayer.mediaPlayer;
+import com.demo.designPattern.adapter.adaptee.mediaPlayer.mediaAdapter;
+import com.demo.designPattern.adapter.adaptee.mediaPlayer.mediaPlayer;
 
-public class audioPlayer implements mediaPlayer {
-    com.demo.designPattern.adapter.mediaPlayer.mediaAdapter mediaAdapter;
+public class audioPlayerAdapter implements mediaPlayer {
+    mediaAdapter mediaAdapter;
     @Override
     public void play(String audioType, String fileName) {
-        //inbuilt support to play mp3 music files
         if(audioType.equalsIgnoreCase("mp3")){
             System.out.println("Playing mp3 file. Name: " + fileName);
         }
 
-        //mediaAdapter is providing support to play other file formats
         else if(audioType.equalsIgnoreCase("vlc") || audioType.equalsIgnoreCase("mp4")){
             mediaAdapter = new mediaAdapter(audioType);
             mediaAdapter.play(audioType, fileName);
